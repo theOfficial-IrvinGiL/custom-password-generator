@@ -1,6 +1,8 @@
 import {Component} from '@angular/core';
 import {MatDialog, MatDialogConfig} from '@angular/material';
-import {PasswordGeneratorDialogComponent} from './components/password-generator-dialog/password-generator-dialog.component';
+import {
+  PasswordGeneratorDialogComponent
+} from './components/password-generator-dialog/password-generator-dialog.component';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +14,8 @@ export class AppComponent {
 
   const;
   private dialogConfig: MatDialogConfig = {
-    disableClose: true
+    disableClose: true,
+    width: '70%'
   };
 
   constructor(public dialog: MatDialog) {

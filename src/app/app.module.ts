@@ -8,6 +8,8 @@ import { HeaderComponent } from './components/header/header.component';
 import {MaterialModule} from './material/material.module';
 import { PasswordGeneratorDialogComponent } from './components/password-generator-dialog/password-generator-dialog.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule} from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

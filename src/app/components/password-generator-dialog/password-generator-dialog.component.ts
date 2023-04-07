@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {FormControl, FormGroup, Validators} from '@angular/forms';
 
 class MyErrorStateMatcher {
 }
@@ -17,31 +16,11 @@ export class PasswordGeneratorDialogComponent implements OnInit {
   includeNumbers: boolean;
   includeSpecialCharacters: boolean;
 
-  form: FormGroup;
-  numberFormControl = new FormControl('', [Validators.required, Validators.min(2)]);
-
 
   constructor() {
-    this.form = new FormGroup({
-      includeLetters: new FormControl(false),
-      passwordLength: new FormControl('', Validators.required),
-      includeNumbers: new FormControl(false),
-      includeSpecialCharacters: new FormControl(false)
-    });
   }
 
   ngOnInit() {
   }
 
-  formatLabel(value: number): string {
-    if (value >= 1000) {
-      return Math.round(value / 1000) + '';
-    }
-
-    return `${value}`;
-  }
-
-  updatePasswordLength(event: any) {
-    this.passwordLength = event.value;
-  }
 }
