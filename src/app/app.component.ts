@@ -6,11 +6,9 @@ import {
 import {GeneratePasswordService} from './service/generate-password/generate-password.service';
 import {
   MatSnackBar,
-  MatSnackBarRef,
   MatSnackBarHorizontalPosition,
   MatSnackBarVerticalPosition
 } from '@angular/material/snack-bar';
-import {SuccessSnackbarComponent} from './components/success-snackbar/success-snackbar.component';
 
 
 @Component({
@@ -49,8 +47,7 @@ export class AppComponent {
   constructor(
     public dialog: MatDialog,
     public generatePasswordService: GeneratePasswordService,
-    // private snackbar: MatSnackBar) {
-  ) {
+    private snackbar: MatSnackBar) {
   }
 
   public openDialog(): void {
@@ -76,7 +73,7 @@ export class AppComponent {
     password.select();
     document.execCommand('copy');
     password.setSelectionRange(0, 0);
-    // this.openSnackbar();
+    this.openSnackbar();
   }
 
   public generateAgain(): void {
@@ -84,13 +81,15 @@ export class AppComponent {
     this.showGeneratePasswordButton = true;
   }
 
-  // public openSnackbar(): void {
-  //   this.snackbar.openFromComponent(SuccessSnackbarComponent, {
-  //     duration: this.snackbarDurationInSeconds * 1000,
-  //     horizontalPosition: this.snackbarHorizontalPosition,
-  //     verticalPosition: this.snackbarVerticalPosition
-  //   });
-  //
-  // }
+  public openSnackbar(): void {
+    const copiedToClipboardMessage = 'Copied to clipboard 🗒';
+    const dismissAction = 'Dismiss';
+    this.snackbar.open(copiedToClipboardMessage, dismissAction, {
+      duration: this.snackbarDurationInSeconds * 1000,
+      horizontalPosition: this.snackbarHorizontalPosition,
+      verticalPosition: this.snackbarVerticalPosition
+    });
+
+  }
 
 }

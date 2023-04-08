@@ -11,36 +11,35 @@
     <mat-card-title>
       <h4>🔐 Your Custom Password</h4>
     </mat-card-title>
-    <mat-card-content>
-      <div class="generated-password-section">
-        <div class="mat-headline">
-          <mat-form-field class="text-area">
+    <div class="text-area-section">
+      <mat-form-field appearance="outline">
             <textarea #password
                       matInput
                       readonly
                       cdkTextareaAutosize
                       cdkAutosizeMinRows="1"
                       cdkAutosizeMaxRows="5"
-                      [value]="generatedPassword"></textarea>
-          </mat-form-field>
+                      [value]="generatedPassword"
+                      style="text-align: center;"></textarea>
+      </mat-form-field>
 
-        </div>
+    </div>
+    <div>
+      <mat-card-actions align="center">
+        <button mat-raised-button
+                color="primary"
+                (click)="copyGeneratedPasswordToClipboard(password)">
+          Copy to Clipboard
+        </button>
+        <button mat-raised-button
+                color="secondary"
+                (click)="generateAgain()">
+          Generate Again
+        </button>
+      </mat-card-actions>
+    </div>
 
-      </div>
-    </mat-card-content>
 
-    <mat-card-actions align="center">
-      <button mat-raised-button
-              color="primary"
-              (click)="copyGeneratedPasswordToClipboard(password)">
-        Copy to Clipboard
-      </button>
-      <button mat-raised-button
-              color="secondary"
-              (click)="generateAgain()">
-        Generate Again
-      </button>
-    </mat-card-actions>
   </mat-card>
 </div>
 

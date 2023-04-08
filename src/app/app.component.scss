@@ -32,24 +32,21 @@ mat-card-title {
   text-align: center;
 }
 
-.generated-password-section {
+.text-area-section {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
+}
 
-  .mat-headline {
-    color: #FFFFFF;
-    width: auto;
-  }
+mat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
 }
 
 mat-form-field {
-  text-align: center;
+  width: 100%;
+  margin: 5%;
 }
-
-.text-area{
-  width: 90%;
-}
-
-

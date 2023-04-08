@@ -11,14 +11,12 @@ import {
 } from './components/password-generator-dialog/password-generator-dialog.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {FormsModule} from '@angular/forms';
-import {SuccessSnackbarComponent} from './components/success-snackbar/success-snackbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     PasswordGeneratorDialogComponent,
-    SuccessSnackbarComponent
   ],
   imports: [
     BrowserModule,
@@ -31,8 +29,7 @@ import {SuccessSnackbarComponent} from './components/success-snackbar/success-sn
   providers: [],
   bootstrap: [AppComponent],
   entryComponents: [
-    PasswordGeneratorDialogComponent,
-    SuccessSnackbarComponent
+    PasswordGeneratorDialogComponent
   ]
 })
 export class AppModule {
