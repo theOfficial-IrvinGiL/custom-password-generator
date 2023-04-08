@@ -1,6 +1,15 @@
-# CustomPasswordGenerator
+# Custom Password Generator🔐
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.10.
+
+If you have Linux OS, run `make install_dependencies` on terminal to install dependencies and execute `make start` to run the application. If not, execute `npm install` to install dependencies and then use `ng serve` to run the application.
+
+>☝ Note: No unit test are written for this project. The test classes are all but auto-generated.
+
+![](https://github.com/theOfficial-IrvinGiL/custom-password-generator/blob/main/static_sources/Screenshot%20from%202023-04-08%2020-41-38.png)
+![](https://github.com/theOfficial-IrvinGiL/custom-password-generator/blob/main/static_sources/Screenshot%20from%202023-04-08%2020-41-48.png)
+![](https://github.com/theOfficial-IrvinGiL/custom-password-generator/blob/main/static_sources/Screenshot%20from%202023-04-08%2020-41-56.png)
+
 
 ## Development server
 
