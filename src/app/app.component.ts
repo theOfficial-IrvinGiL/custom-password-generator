@@ -57,7 +57,11 @@ export class AppComponent {
 
     dialogReference.afterClosed().subscribe(result => {
 
-      if (result.passwordLength) {
+      if (result === undefined) {
+
+        this.showGeneratePasswordButton = true;
+
+      } else if (result.passwordLength) {
 
         this.generatedPassword = this.generatePasswordService.generatePassword(
           result.passwordLength,
