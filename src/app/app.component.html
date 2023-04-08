@@ -1,8 +1,46 @@
 <app-header></app-header>
-<div class="center">
+<div class="center" *ngIf="showGeneratePasswordButton">
   <button mat-raised-button (click)="openDialog()">
     <h2>Generate Password</h2>
   </button>
-</div>
 
+
+</div>
+<div class="result-section" *ngIf="generatedPassword">
+  <mat-card>
+    <mat-card-title>
+      <h4>🔐 Your Custom Password</h4>
+    </mat-card-title>
+    <mat-card-content>
+      <div class="generated-password-section">
+        <div class="mat-headline">
+          <mat-form-field class="text-area">
+            <textarea #password
+                      matInput
+                      readonly
+                      cdkTextareaAutosize
+                      cdkAutosizeMinRows="1"
+                      cdkAutosizeMaxRows="5"
+                      [value]="generatedPassword"></textarea>
+          </mat-form-field>
+
+        </div>
+
+      </div>
+    </mat-card-content>
+
+    <mat-card-actions align="center">
+      <button mat-raised-button
+              color="primary"
+              (click)="copyGeneratedPasswordToClipboard(password)">
+        Copy to Clipboard
+      </button>
+      <button mat-raised-button
+              color="secondary"
+              (click)="generateAgain()">
+        Generate Again
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
 
