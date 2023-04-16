@@ -3,3 +3,6 @@ start:
 
 install_dependencies:
 		npm install
+
+deploy_project:
+		ng build
