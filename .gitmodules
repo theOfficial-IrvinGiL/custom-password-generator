@@ -1,0 +1,3 @@
+[submodule "custom-password-generator-deployment"]
+	path = custom-password-generator-deployment
+	url = git@github.com-personal:theOfficial-IrvinGiL/custom-password-generator-deployment.git
