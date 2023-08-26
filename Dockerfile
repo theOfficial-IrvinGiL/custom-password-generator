@@ -2,13 +2,11 @@ FROM node:10.24.1-alpine3.11 AS build
 
 WORKDIR /app/
 
-COPY package.json ./
+RUN npm install -g @angular/cli@^7.3.10
 
-RUN npm install
+COPY package*.json ./
 
-COPY . .
-
-RUN npm run build --prod
+RUN npm i
 
 EXPOSE 4200
 

@@ -1,5 +1,3 @@
-# start:
-#		ng serve --port 1234
 start:
 		# remove existing images
 		docker rmi -f custom-password-app:1.0
@@ -16,3 +14,7 @@ install_dependencies:
 
 deploy_project:
 		ng build --prod
+
+stop:
+		docker stop custom-password-app:1.0
+		docker rm custom-password-app:1.0
